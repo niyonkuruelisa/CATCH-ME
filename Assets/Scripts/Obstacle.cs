@@ -18,6 +18,7 @@ public class Obstacle : MonoBehaviour {
             other.GetComponent<Player>().camAnim.SetTrigger("shake");
             Instantiate(effect, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            FindObjectOfType<AudioManager>().Play("danger");
         }   
     }
 }

@@ -29,6 +29,7 @@ public class Player : MonoBehaviour {
     {
 
         if (health <= 0) {
+            FindObjectOfType<AudioManager>().Play("failed");
             spawner.SetActive(false);
             //restartDisplay.SetActive(true);
             restartButton.SetActive(true);

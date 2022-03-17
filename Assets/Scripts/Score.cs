@@ -15,15 +15,9 @@ public class Score : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other)
-    {
+    { 
         score++;
         Destroy(other.gameObject);
     }
 
-    public void restartGame()
-    {
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        
-    }
 }
